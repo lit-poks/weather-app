@@ -117,7 +117,7 @@ class App extends Component{
     </p>
           <div className="container">
             <span className="temp">
-              <p>{this.state.temp}<sup>o</sup>C  <img src={watersolid} id="water" alt="water-solid"/></p>
+              <p>{(((this.state.temp-32)*5)/9).toFixed(1)}<sup>o</sup>C  <img src={watersolid} id="water" alt="water-solid"/></p>
             </span>
 
           <span className="details">
@@ -130,8 +130,8 @@ class App extends Component{
               Pressure:<b>{this.state.pressure} Pa</b>
             </p>
             <p>
-              Max Temp:<b>{this.state.maxtemp}<sup>o</sup>C</b><br/>
-              Min Temp:<b>{this.state.mintemp}<sup>o</sup>C</b>
+              Max Temp:<b>{(((this.state.maxtemp-32)*5)/9).toFixed(1)}<sup>o</sup>C</b><br/>
+              Min Temp:<b>{(((this.state.mintemp-32)*5)/9).toFixed(1)}<sup>o</sup>C</b>
             </p>
             <p>
               Sunrise: <b>{new Date(this.state.sunrise*1000).toLocaleTimeString('en-GB')}</b><br/>
